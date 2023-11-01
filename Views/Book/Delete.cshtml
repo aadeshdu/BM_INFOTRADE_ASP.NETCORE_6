@@ -34,6 +34,7 @@
 </div>
 <div>
     
-    <input type ="submit" value ="Delete" class ="btn-danger" />
+@*    <input type ="submit" value ="Delete" class ="btn-danger" />
+*@    <a asp-action="DeleteConfirmed" asp-controller="Book" asp-route-id="@Model.Id">Delete</a>
     <a asp-action="Index">Back to List</a>
 </div>

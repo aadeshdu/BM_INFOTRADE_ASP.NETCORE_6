@@ -108,26 +108,21 @@ namespace BM_INFOTRADE_ASP.NETCORE_6.Controllers
             }
             return View(temp);
         }
-        [HttpPost, ActionName("Delete")]
+        //[HttpPost, ActionName("Delete")]
 
-            public async Task<IActionResult> DeleteConfirmed(int? id)
-            {
+        public async Task<IActionResult> DeleteConfirmed(int? id)
+        {
             var temp = await context.Books.FindAsync(id);
-            if(temp != null)
+            if (temp != null)
             {
                 context.Books.Remove(temp);
             }
             await context.SaveChangesAsync();
-            return RedirectToAction("Index", "Book"); 
-            }
-
-
-
-
-            }
+            return RedirectToAction("Index", "Book");
+        }
     }
+}
 
 
 
-      
-       
+
